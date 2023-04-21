@@ -6,9 +6,9 @@ export const ROUTES: RouteRecordRaw[] = [
     component: () => import('@/views/HomeView.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/AboutView.vue')
+    path: '/recipes',
+    name: 'Recipes',
+    component: () => import('@/views/RecipesView.vue')
   },
   {
     path: '/resources',
@@ -16,9 +16,9 @@ export const ROUTES: RouteRecordRaw[] = [
     component: () => import('@/views/ResourcesView.vue')
   },
   {
-    path: '/recipes',
-    name: 'Recipes',
-    component: () => import('@/views/RecipesView.vue')
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/AboutView.vue')
   }
 ]
 
