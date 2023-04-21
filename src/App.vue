@@ -1,26 +1,22 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
+import { ROUTES } from '@/router'
+const router = useRouter()
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/recipes">Recipes</RouterLink>
-      <RouterLink to="/resources">Resources</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+  <header class="w-full bg-slate-50 drop-shadow mb-4">
+    <nav class="flex flex-row justify-evenly h-12 items-center">
+      <span
+        v-for="route in ROUTES"
+        class="cursor-pointer underline"
+        :key="route.name"
+        @click="router.push(route.path)"
+      >
+        {{ route.name }}
+      </span>
     </nav>
   </header>
 
   <RouterView />
 </template>
-
-<style scoped>
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  gap: 1rem;
-}
-</style>
