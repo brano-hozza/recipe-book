@@ -8,7 +8,7 @@ We are using `pnpm` as an alternative to `npm`. You can install it with `npm ins
 
 To install dependencies, run `pnpm install`.
 
-To run the app, run `pnpm start`.
+To run the app, run `pnpm dev`.
 
 ## How to contribute
 
